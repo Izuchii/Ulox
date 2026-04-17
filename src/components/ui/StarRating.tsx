@@ -25,7 +25,6 @@ export const StarRating: React.FC<StarRatingProps> = ({
   const stars = [];
   for (let i = 1; i <= maxStars; i++) {
     const isFilled = i <= rating;
-    const isPartial = !isFilled && i - 1 < rating;
     
     stars.push(
       <span
