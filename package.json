@@ -1,22 +1,28 @@
 {
-  "name": "ulox-mobile-ui-system",
+  "name": "ulox-ui-system",
   "version": "1.0.0",
   "private": true,
-  "main": "node_modules/expo/AppEntry.js",
+  "type": "module",
   "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview",
     "start": "expo start",
     "android": "expo start --android",
     "ios": "expo start --ios",
-    "web": "expo start --web",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
     "expo": "~51.0.0",
-    "react": "18.2.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
     "react-native": "0.74.1"
   },
   "devDependencies": {
-    "typescript": "^5.4.5",
-    "@types/react": "~18.2.45"
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "@vitejs/plugin-react": "^4.3.1",
+    "typescript": "^5.6.2",
+    "vite": "^5.4.8"
   }
 }
