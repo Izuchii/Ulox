@@ -18,6 +18,7 @@ This repository contains a complete, mobile-first UI system blueprint and applic
 - `design/AppScreens.md` — frame inventory for all mobile app screens and responsive behavior.
 - `design/Admin.md` — admin console architecture and frames.
 - `src/ulox-ui-blueprint.ts` — machine-readable blueprint for tabs, modules, pages, components, and tokens.
+- `App.tsx` — React Native (Expo) prototype covering the full design system and frame catalog.
 
 ## Required Frame Pages
 
@@ -44,12 +45,21 @@ Rent nested tabs:
 - Properties
 - Roommates
 
-## Run locally
+## Run locally (web)
 
 ```bash
 npm install
 npm run dev
 ```
+
+## Run React Native prototype (Expo)
+
+```bash
+npm install
+npm run start
+```
+
+Use Expo device/emulator/web preview to inspect the frame system.
 
 ## Design principles
 
