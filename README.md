@@ -1,36 +1,91 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Ulox — Real Estate Super-Platform UI System
 
-## Getting Started
+This repository contains the complete product UI system for **Ulox**, a real estate super-platform and property services ecosystem that unifies:
 
-First, run the development server:
+- Property marketplace (rent, buy, HomeBuy Assist)
+- Roommates marketplace
+- Reels commerce/media discovery
+- DwellHub goods and services
+- LabourHub jobs and settlements
+- User authentication/profile workflows
+- Admin moderation and operations console
+
+## Web Application (Next.js)
+
+A full Next.js 14 web application with 46 routes, built with TypeScript and Tailwind CSS.
+
+### Getting Started
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) with your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Build
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+npm start
+```
 
-## Learn More
+## Design Documentation
 
-To learn more about Next.js, take a look at the following resources:
+- `design/Foundations.md` — design tokens, color, typography, spacing, trust language.
+- `design/Components.md` — reusable component catalog.
+- `design/Patterns.md` — reusable interaction and flow patterns.
+- `design/AppScreens.md` — frame inventory for all app screens and responsive behavior.
+- `design/Admin.md` — admin console architecture and frames.
+- `src/ulox-ui-blueprint.ts` — machine-readable blueprint for tabs, modules, pages, components, and tokens.
+- `App.tsx` — React Native (Expo) prototype covering the full design system and frame catalog.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Required Frame Pages
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **Foundations** (tokens, grid, responsive rules)
+- **Components** (buttons, inputs, cards, navigation, filters, badges, modals, tables, notifications)
+- **Patterns** (search/filter, checkout, booking, moderation)
+- **App Screens** (all required marketplace, reels, dwellhub, labourhub, auth, and profile flows)
+- **Admin** (moderation, disputes, monitoring, CMS, analytics)
 
-## Deploy on Vercel
+## Navigation Model
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Top tabs:
+1. Land & Property Listings
+2. Reels
+3. DwellHub
+4. LabourHub
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Nested property tabs:
+- Rent
+- Buy
+- HomeBuy Assist
+
+Rent nested tabs:
+- Properties
+- Roommates
+
+## Web App Structure (`src/app/`)
+
+| Route | Description |
+|-------|-------------|
+| `/` | Home / discovery feed |
+| `/listings` | Property listings |
+| `/listings/rent/properties` | Rental properties |
+| `/listings/rent/roommates` | Roommate finder |
+| `/listings/buy/checkout` | Purchase flow with conveyancing tracker |
+| `/listings/homebuy-assist` | First-time buyer program |
+| `/reels` | Vertical reels feed |
+| `/dwellhub/goods` | Product marketplace |
+| `/dwellhub/services` | Service provider marketplace |
+| `/labourhub` | Jobs marketplace |
+| `/profile` | User profile and settings |
+| `/auth/login` | Authentication |
+| `/admin/analytics` | Admin console |
+
+## Tech Stack
+
+- **Framework:** Next.js 14 (App Router)
+- **Language:** TypeScript
+- **Styling:** Tailwind CSS v4
+- **Design tokens:** Primary `#1B4F72` · Secondary `#F39C12`

@@ -37,6 +37,16 @@
     "**/*.mts"
   ],
   "exclude": [
-    "node_modules"
+    "node_modules",
+    "App.tsx",
+    "app.js",
+    "vite.config.ts",
+    "src/main.tsx",
+    "src/styles.css",
+    "src/App.tsx",
+    "src/components/UI.tsx",
+    "src/data/frames.ts",
+    "src/design/tokens.ts",
+    "src/ulox-ui-blueprint.ts"
   ]
 }
